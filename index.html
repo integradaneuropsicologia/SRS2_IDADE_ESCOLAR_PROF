@@ -639,13 +639,8 @@ $("#form").addEventListener("submit", async (e)=>{
       submitted_at: nowISO,
       total: resultado.total,
       categoria: categoria_csv,
-      questions: JSON.stringify(qaList),
-      metrics: JSON.stringify({
-        answers_raw: rawAnswers,
-        answers_scored: scoredAnswers,
-        resultado,
-        duration_sec: durationSec
-      })
+      questions: "",//JSON.stringify(qaList),
+      metrics: "",
     };
 
     await sheetCreate(SHEETS.SCORES, rowScores);
